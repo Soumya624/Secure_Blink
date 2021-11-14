@@ -43,34 +43,35 @@ function App() {
         <NavbarBrand href="/">
           <img src="img22.png" alt="logo" style={{ width: "40%" }} />
         </NavbarBrand>
-        <NavbarToggler onClick={function noRefCheck() {}} />
-        <Collapse navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink href="#" style={{ color: "white" }}>
-                Components
-              </NavLink>
-            </NavItem>
-          </Nav>
-          <NavbarText
-            style={{ color: "black", fontWeight: "bold", margin: "0 1%" }}
-          >
-            Login
-          </NavbarText>
-          <NavbarText style={{ margin: "0 1%" }}>
-            <Button
-              outline
-              color="link"
-              style={{
-                color: "white",
-                borderRadius: "5px",
-                backgroundColor: "#01cb63",
-              }}
+        {window.innerWidth > 768 ? (
+          <Collapse navbar>
+            <Nav className="me-auto" navbar>
+              <NavItem>
+                <NavLink href="#" style={{ color: "white" }}>
+                  Components
+                </NavLink>
+              </NavItem>
+            </Nav>
+            <NavbarText
+              style={{ color: "black", fontWeight: "bold", margin: "0 1%" }}
             >
-              <i>Register</i>
-            </Button>
-          </NavbarText>
-        </Collapse>
+              Login
+            </NavbarText>
+            <NavbarText style={{ margin: "0 1%" }}>
+              <Button
+                outline
+                color="link"
+                style={{
+                  color: "white",
+                  borderRadius: "5px",
+                  backgroundColor: "#01cb63",
+                }}
+              >
+                <i>Register</i>
+              </Button>
+            </NavbarText>
+          </Collapse>
+        ) : null}
       </Navbar>
       <Row style={{ backgroundColor: "#01cb63" }}>
         <Col
